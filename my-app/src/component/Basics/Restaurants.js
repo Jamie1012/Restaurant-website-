@@ -1,12 +1,17 @@
-import React from 'react';
+import React  from 'react';
 import "./style.css";
-
+import Menu from "./menuApi.js";
+import { useState } from 'react';
 
 const Restaurants = () => {
-   return (
+   
+  //To manage data 
+  const [menuData, setMenuData] = useState(Menu);
+
+  return (
     <>
     <div className="card-container">
-         <div className="card">
+        <div className="card">
               <div className="card-body">
                     <span className="card-number card-circle subtle ">1</span>
                     <span className="card-author subtle" > Breakfast</span>
@@ -16,12 +21,12 @@ const Restaurants = () => {
                     </span>
                     <div className="card-read">Read</div>
               </div>
-              <img src={image} alt="images" className="card-media" />
-         </div>
+              {/* <img src={image} alt="images" className="card-media" /> */}
+          </div>
     </div>
-    </>
-   );
- };
-
- export default Restaurants;
+  </>
+  );
+};
+ 
+export default Restaurants;
  
